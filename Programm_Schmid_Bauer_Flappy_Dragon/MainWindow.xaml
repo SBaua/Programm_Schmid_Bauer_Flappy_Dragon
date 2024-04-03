@@ -8,7 +8,7 @@
         Title="Flappy Bird WPF MOO ICT" Height="490" Width="525">
     <Canvas Name="MyCanvas" Focusable="True" KeyDown="KeyIsDown" KeyUp="KeyIsUp" Background="LightBlue">
 
-        <Image Height="145" Width="200" Source="/clouds (1).png" Canvas.Left="28" Canvas.Top="120" Tag="clouds"/>
+        <Image Height="145" Width="200" Source="/clouds (1).png" Canvas.Left="24" Canvas.Top="120" Tag="clouds"/>
 
         <Image Height="145" Width="200" Source="/clouds2.png" Canvas.Left="307" Canvas.Top="120" Tag="clouds"/>
 
