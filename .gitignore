@@ -361,3 +361,5 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/Programm_Schmid_Bauer_Flappy_Dragon/images/clouds2.png.url
+/Programm_Schmid_Bauer_Flappy_Dragon/images/flappyBird.png.url
