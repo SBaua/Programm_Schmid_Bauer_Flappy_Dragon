@@ -9,11 +9,21 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="clouds %281%29.png" />
     <None Remove="clouds.png.url" />
+    <None Remove="clouds2.png" />
+    <None Remove="flappyBird.png" />
+    <None Remove="pipeBottom.png" />
+    <None Remove="pipeTop.png" />
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="clouds (1).png" />
     <Resource Include="clouds.png.url" />
+    <Resource Include="clouds2.png" />
+    <Resource Include="flappyBird.png" />
+    <Resource Include="pipeBottom.png" />
+    <Resource Include="pipeTop.png" />
   </ItemGroup>
 
 </Project>
