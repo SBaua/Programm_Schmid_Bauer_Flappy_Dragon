@@ -8,4 +8,12 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="flappyBird.png.url" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="flappyBird.png.url" />
+  </ItemGroup>
+
 </Project>
