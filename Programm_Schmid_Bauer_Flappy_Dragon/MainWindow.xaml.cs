@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Security.Cryptography;
+using System.Security.Policy;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
@@ -11,195 +12,149 @@ using System.Windows.Threading;
 
 namespace Programm_Schmid_Bauer_Flappy_Dragon
 {
+    /// <summary>
+    /// Interaction logic for MainWindow.xaml
+    /// </summary>
     public partial class MainWindow : Window
     {
-        private const int Gravity = 2;
-        private const int JumpSpeed = -20;
-        private const int PipeSpeed = 5;
-        private const int PipeSpacing = 200;
-        private const int PipeWidth = 100;
 
-        private int _score = 0;
-        private bool _gameOver = false;
-        private readonly DispatcherTimer _gameTimer = new DispatcherTimer();
-        private readonly List<Pipe> _pipes = new List<Pipe>();
-        private int _frameCounter = 0;
+        DispatcherTimer gameTimer = new DispatcherTimer();
+
+
+        double score;
+        int gravity = 8;
+        bool gameOver;
+        Rect flappyBirdHitBox;
 
         public MainWindow()
         {
             InitializeComponent();
-            InitializeGame();
+
+            gameTimer.Tick += MainEventTimer;
+            gameTimer.Interval = TimeSpan.FromMilliseconds(20);
+            StartGame();
+
         }
 
-        private void InitializeGame()
+        private void MainEventTimer(object sender, EventArgs e)
         {
-            _gameTimer.Tick += GameTimer_Tick;
-            _gameTimer.Interval = TimeSpan.FromMilliseconds(20);
-            _gameTimer.Start();
+            txtScore.Content = "Score: " + score;
 
-            GameCanvas.Background = new ImageBrush(new BitmapImage(new Uri("Images/background.png", UriKind.Relative)));
+            flappyBirdHitBox = new Rect(Canvas.GetLeft(flappyBird), Canvas.GetTop(flappyBird), flappyBird.Width - 12, flappyBird.Height);
 
-            FlappyBirdImage.Source = new BitmapImage(new Uri("Images/flappy_bird.png", UriKind.Relative));
-            Canvas.SetLeft(FlappyBirdImage, 110);
-            Canvas.SetTop(FlappyBirdImage, 150);
+            Canvas.SetTop(flappyBird, Canvas.GetTop(flappyBird) + gravity);
 
-            ScoreText.Text = "Score: 0";
-        }
-
-        private void GameTimer_Tick(object sender, EventArgs e)
-        {
-            if (!_gameOver)
+            if (Canvas.GetTop(flappyBird) < -30 || Canvas.GetTop(flappyBird) + flappyBird.Height > 460)
             {
-                _frameCounter++;
+                EndGame();
+            }
 
-                if (_frameCounter % 80 == 0)
+
+            foreach (var x in MyCanvas.Children.OfType<Image>())
+            {
+                if ((string)x.Tag == "obs1" || (string)x.Tag == "obs2" || (string)x.Tag == "obs3")
                 {
-                    AddPipe();
+                    Canvas.SetLeft(x, Canvas.GetLeft(x) - 5);
+
+                    if (Canvas.GetLeft(x) < -100)
+                    {
+                        Canvas.SetLeft(x, 800);
+
+                        score += .5;
+                    }
+
+                    Rect PillarHitBox = new Rect(Canvas.GetLeft(x), Canvas.GetTop(x), x.Width, x.Height);
+
+                    if (flappyBirdHitBox.IntersectsWith(PillarHitBox))
+                    {
+                        EndGame();
+                    }
                 }
 
-                UpdatePipes();
+                if ((string)x.Tag == "clouds")
+                {
+                    Canvas.SetLeft(x, Canvas.GetLeft(x) - 1);
 
-                FlappyBirdFall();
-                CheckCollision();
-                UpdateScore();
+                    if (Canvas.GetLeft(x) < -250)
+                    {
+                        Canvas.SetLeft(x, 550);
+
+                        score += .5;
+                    }
+
+                }
+
+
+            }
+
+
+        }
+
+        private void KeyIsDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Space)
+            {
+                flappyBird.RenderTransform = new RotateTransform(-20, flappyBird.Width / 2, flappyBird.Height / 2);
+                gravity = -8;
+            }
+
+            if (e.Key == Key.R && gameOver == true)
+            {
+                StartGame();
             }
         }
 
-        private void FlappyBirdFall()
+        private void KeyIsUp(object sender, KeyEventArgs e)
         {
-            Canvas.SetTop(FlappyBirdImage, Canvas.GetTop(FlappyBirdImage) + Gravity);
+            flappyBird.RenderTransform = new RotateTransform(5, flappyBird.Width / 2, flappyBird.Height / 2);
+
+            gravity = 8;
         }
 
-        private void FlappyBirdJump()
+        private void StartGame()
         {
-            Canvas.SetTop(FlappyBirdImage, Canvas.GetTop(FlappyBirdImage) + JumpSpeed);
-        }
+            MyCanvas.Focus();
 
-        private void AddPipe()
-        {
-            var topPipe = new Pipe(true);
-            var bottomPipe = new Pipe(false);
+            int temp = 300;
 
-            GameCanvas.Children.Add(topPipe.Rect);
-            GameCanvas.Children.Add(bottomPipe.Rect);
+            score = 0;
 
-            _pipes.Add(topPipe);
-            _pipes.Add(bottomPipe);
-        }
+            gameOver = false;
 
-        private void UpdatePipes()
-        {
-            for (int i = 0; i < _pipes.Count; i++)
+            Canvas.SetTop(flappyBird, 190);
+
+            foreach (var x in MyCanvas.Children.OfType<Image>())
             {
-                _pipes[i].Move(PipeSpeed);
-
-                if (Canvas.GetLeft(_pipes[i].Rect) < -PipeWidth)
+                if ((string)x.Tag == "obs1")
                 {
-                    GameCanvas.Children.Remove(_pipes[i].Rect);
-                    _pipes.RemoveAt(i);
-                    i--;
+                    Canvas.SetLeft(x, 500);
+                }
+                if ((string)x.Tag == "obs2")
+                {
+                    Canvas.SetLeft(x, 800);
+                }
+                if ((string)x.Tag == "obs3")
+                {
+                    Canvas.SetLeft(x, 1100);
+                }
+
+                if ((string)x.Tag == "clouds")
+                {
+                    Canvas.SetLeft(x, 300 + temp);
+                    temp = 800;
                 }
             }
+
+            gameTimer.Start();
         }
 
-       private Rect GetFlappyBirdBounds()
-{
-    // Berechnen Sie die Grenzen des Flappy Bird-Bildes basierend auf der aktuellen Position und Größe
-    return new Rect(Canvas.GetLeft(FlappyBirdImage), Canvas.GetTop(FlappyBirdImage), FlappyBirdImage.ActualWidth, FlappyBirdImage.ActualHeight);
-}
-
-private void CheckCollision()
-{
-    Rect flappyBirdBounds = GetFlappyBirdBounds();
-
-    if (flappyBirdBounds.Top < 0 || flappyBirdBounds.Bottom > GameCanvas.ActualHeight)
-    {
-        GameOver();
-    }
-
-    foreach (var pipe in _pipes)
-    {
-        if (flappyBirdBounds.IntersectsWith(pipe.Rect.Bounds))
+        private void EndGame()
         {
-            GameOver();
-        }
-    }
-}
+            gameTimer.Stop();
+            gameOver = true;
+            txtScore.Content += " Game Over!!! Press R to restart.";
 
-
-        private void UpdateScore()
-        {
-            foreach (var pipe in _pipes)
-            {
-                if (Canvas.GetLeft(FlappyBirdImage) > Canvas.GetLeft(pipe.Rect) + PipeWidth &&
-                    (bool)pipe.Rect.GetValue(TagProperty) == false &&
-                    pipe.Rect.Visibility == Visibility.Visible)
-                {
-                    _score++;
-                    ScoreText.Content = "Score: " + _score;
-                    pipe.Rect.SetValue(TagProperty, true);
-                }
-            }
-        }
-
-        private void GameOver()
-        {
-            _gameOver = true;
-            _gameTimer.Stop();
-            MessageBox.Show("Game Over! Your score: " + _score);
-        }
-
-        private void Window_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.Key == Key.Space && !_gameOver)
-            {
-                FlappyBirdJump();
-            }
-
-            if (e.Key == Key.Enter && _gameOver)
-            {
-                RestartGame();
-            }
-        }
-
-        private void RestartGame()
-        {
-            _gameOver = false;
-            _score = 0;
-            ScoreText.Content = "Score: 0";
-            _pipes.Clear();
-            GameCanvas.Children.Clear();
-            InitializeGame();
-        }
-    }
-
-    public class Pipe
-    {
-        public Rectangle Rect { get; }
-
-        public Pipe(bool isTop)
-        {
-            Rect = new Rectangle
-            {
-                Width = 100,
-                Height = 500,
-                Fill = Brushes.Green,
-                Visibility = Visibility.Visible
-            };
-
-            if (isTop)
-            {
-                Rect.RenderTransform = new RotateTransform(180);
-            }
-
-            Canvas.SetTop(Rect, isTop ? -PipeSpacing - Rect.Height : 400 + PipeSpacing);
-            Canvas.SetLeft(Rect, 800);
-            Rect.SetValue(TagProperty, false);
-        }
-
-        public void Move(int speed)
-        {
-            Canvas.SetLeft(Rect, Canvas.GetLeft(Rect) - speed);
         }
     }
 }
+
