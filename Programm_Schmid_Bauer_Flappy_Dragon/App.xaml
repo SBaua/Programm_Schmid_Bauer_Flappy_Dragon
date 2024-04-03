@@ -1,0 +1,9 @@
+﻿<Application x:Class="Programm_Schmid_Bauer_Flappy_Dragon.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Programm_Schmid_Bauer_Flappy_Dragon"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+         
+    </Application.Resources>
+</Application>
