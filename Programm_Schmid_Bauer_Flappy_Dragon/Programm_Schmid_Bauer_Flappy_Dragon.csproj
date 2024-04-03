@@ -8,4 +8,12 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="clouds.png.url" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="clouds.png.url" />
+  </ItemGroup>
+
 </Project>
