@@ -9,6 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="button_click-here-for-a-different-icebird.png" />
     <None Remove="clouds %281%29.png" />
     <None Remove="clouds.png.url" />
     <None Remove="clouds2.png" />
@@ -18,6 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="button_click-here-for-a-different-icebird.png" />
     <Resource Include="clouds (1).png" />
     <Resource Include="clouds.png.url" />
     <Resource Include="clouds2.png" />
