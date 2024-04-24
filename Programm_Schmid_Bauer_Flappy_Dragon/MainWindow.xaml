@@ -34,9 +34,14 @@
         </Image>
 
         <Label Name="txtScore" FontSize="22" FontWeight="ExtraBold" Content="Score: 0" />
-        <Button x:Name="btnBird"  Content="" Height="59" Canvas.Top="357" Width="275" Canvas.Left="146" Click="btnBird_Click" HorizontalAlignment="Left" VerticalAlignment="Center" Visibility="Hidden">
+        <Button x:Name="btnBird"  Content="" Height="59" Canvas.Top="357" Width="275" Canvas.Left="146" Click="btnBird_Click" HorizontalAlignment="Left" VerticalAlignment="Center" >
             <Button.Background>
                 <ImageBrush ImageSource="/button_click-here-for-a-different-icebird.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btnGameMode" Content="" Canvas.Left="147" Canvas.Top="270" Height="55" Width="274">
+            <Button.Background>
+                <ImageBrush ImageSource="/button_different-gamemode.png"/>
             </Button.Background>
         </Button>
     </Canvas>
