@@ -21,7 +21,7 @@ namespace Programm_Schmid_Bauer_Flappy_Dragon
         DispatcherTimer gameTimer = new DispatcherTimer();
 
         double score;
-        int gravity = 6;
+        int gravity = 4;
         bool gameOver;
         Rect flappyBirdHitBox;
 
@@ -83,7 +83,7 @@ namespace Programm_Schmid_Bauer_Flappy_Dragon
             if (e.Key == Key.Space)
             {
                 flappyBird.RenderTransform = new RotateTransform(-20, flappyBird.Width / 2, flappyBird.Height / 2);
-                gravity = -6;
+                gravity = -gravity;
             }
 
             if (e.Key == Key.R && gameOver == true)
@@ -95,11 +95,12 @@ namespace Programm_Schmid_Bauer_Flappy_Dragon
         {
             flappyBird.RenderTransform = new RotateTransform(5, flappyBird.Width / 2, flappyBird.Height / 2);
 
-            gravity = 6;
+            gravity = gravity;
         }
         private void StartGame()
         {
             this.btnBird.Visibility = Visibility.Hidden;
+            this.btnGameMode.Visibility = Visibility.Hidden;
 
             MyCanvas.Focus();
 
@@ -139,6 +140,7 @@ namespace Programm_Schmid_Bauer_Flappy_Dragon
             gameOver = true;
             txtScore.Content += " Game Over!!! Press R to restart.";
             this.btnBird.Visibility = Visibility.Visible;
+            this.btnGameMode.Visibility = Visibility.Visible;
             var btnBird = new Button { Content = "btnBird" };
             btnBird.Click += btnBird_Click;
 
@@ -146,7 +148,7 @@ namespace Programm_Schmid_Bauer_Flappy_Dragon
 
         private void btnBird_Click(object sender, RoutedEventArgs e)
         {
-
+           /* flappyBird.Opacity */
         }
     }
 }
