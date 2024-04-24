@@ -99,6 +99,8 @@ namespace Programm_Schmid_Bauer_Flappy_Dragon
         }
         private void StartGame()
         {
+            this.btnBird.Visibility = Visibility.Hidden;
+
             MyCanvas.Focus();
 
             int temp = 300;
@@ -136,6 +138,14 @@ namespace Programm_Schmid_Bauer_Flappy_Dragon
             gameTimer.Stop();
             gameOver = true;
             txtScore.Content += " Game Over!!! Press R to restart.";
+            this.btnBird.Visibility = Visibility.Visible;
+            var btnBird = new Button { Content = "btnBird" };
+            btnBird.Click += btnBird_Click;
+
+        }
+
+        private void btnBird_Click(object sender, RoutedEventArgs e)
+        {
 
         }
     }

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Programm_Schmid_Bauer_Flappy_Dragon"
         mc:Ignorable="d"
-        Title="Flappy Bird WPF MOO ICT" Height="490" Width="525">
+        Title="Flappy Dragon Project Schmid Bauer" Height="490" Width="525">
     <Canvas Name="MyCanvas" Focusable="True" KeyDown="KeyIsDown" KeyUp="KeyIsUp" Background="LightBlue">
 
         <Image Height="145" Width="200" Source="/clouds (1).png" Canvas.Left="24" Canvas.Top="120" Tag="clouds"/>
@@ -14,7 +14,7 @@
 
 
         <Image Height="390" Width="66" Source="/pipeBottom.png" Tag="obs1" Canvas.Left="76" Canvas.Top="270" />
-        <Image Height="390" Width="66" Source="/pipeTop.png" Tag="obs1" Canvas.Left="76" Canvas.Top="-236" />
+        <Image Height="388" Width="66" Source="/pipeTop.png" Tag="obs1" Canvas.Left="76" Canvas.Top="-236" HorizontalAlignment="Center" VerticalAlignment="Top" />
 
         <Image Height="390" Width="66" Source="/pipeBottom.png" Tag="obs2" Canvas.Left="228" Canvas.Top="416" />
         <Image Height="390" Width="66" Source="/pipeTop.png" Tag="obs2" Canvas.Left="228" Canvas.Top="-90" />
@@ -25,6 +25,6 @@
         <Image Name="flappyBird" Height="36" Width="50" Source="/flappyBird.png" Stretch="Fill" Canvas.Top="190" Canvas.Left="10" />
 
         <Label Name="txtScore" FontSize="22" FontWeight="ExtraBold" Content="Score: 0" />
-
+        <Button x:Name="btnBird" Visibility="Hidden" Content="Button" Height="166" Canvas.Top="212" Width="224" Canvas.Left="150" Click="btnBird_Click"/> 
     </Canvas>
 </Window>
