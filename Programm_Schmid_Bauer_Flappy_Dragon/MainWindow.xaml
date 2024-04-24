@@ -5,10 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Programm_Schmid_Bauer_Flappy_Dragon"
         mc:Ignorable="d"
-        Title="Flappy Dragon Project Schmid Bauer" Height="490" Width="525">
-    <Canvas Name="MyCanvas" Focusable="True" KeyDown="KeyIsDown" KeyUp="KeyIsUp" Background="#FF7E98FF">
+        Title="Flappy Dragon Project Schmid Bauer" Height="490" Width="525" UseLayoutRounding="False">
+    <Canvas Name="MyCanvas" Focusable="True" KeyDown="KeyIsDown" KeyUp="KeyIsUp" Background="WhiteSmoke">
 
-        <Image Height="145" Width="200" Source="/clouds (1).png" Canvas.Left="24" Canvas.Top="120" Tag="clouds"/>
+        <Image Height="204" Width="200" Source="/flocke1_-removebg-preview.png" Canvas.Top="112" Tag="clouds" Stretch="Fill"/>
 
         <Image Height="145" Width="200" Source="/clouds2.png" Canvas.Left="307" Canvas.Top="120" Tag="clouds"/>
 
@@ -22,7 +22,16 @@
         <Image Height="390" Width="66" Source="/Piller2-removebg-preview.png" Tag="obs3" Canvas.Left="426" Canvas.Top="292" Stretch="Fill" />
         <Image Height="390" Width="66" Source="/Piller2-removebg-preview - Copy.png" Tag="obs3" Canvas.Left="426" Canvas.Top="-214" Stretch="Fill" />
 
-        <Image Name="flappyBird" Height="47" Width="50" Source="/birdl-removebg-preview.png" Stretch="Fill" Canvas.Top="190" Canvas.Left="10" HorizontalAlignment="Center" VerticalAlignment="Top" />
+        <Image Name="flappyBird" Height="48" Width="50" Source="/birdl-removebg-preview.png" Stretch="Fill" Canvas.Top="192" Canvas.Left="23" HorizontalAlignment="Center" VerticalAlignment="Top" RenderTransformOrigin="1,1" >
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
 
         <Label Name="txtScore" FontSize="22" FontWeight="ExtraBold" Content="Score: 0" />
         <Button x:Name="btnBird"  Content="" Height="59" Canvas.Top="357" Width="275" Canvas.Left="146" Click="btnBird_Click" HorizontalAlignment="Left" VerticalAlignment="Center" Visibility="Hidden">
