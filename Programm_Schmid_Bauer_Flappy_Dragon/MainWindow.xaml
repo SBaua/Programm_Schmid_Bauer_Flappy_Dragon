@@ -22,7 +22,7 @@
         <Image Height="390" Width="66" Source="/Piller2-removebg-preview.png" Tag="obs3" Canvas.Left="426" Canvas.Top="292" Stretch="Fill" />
         <Image Height="390" Width="66" Source="/Piller2-removebg-preview - Copy.png" Tag="obs3" Canvas.Left="426" Canvas.Top="-214" Stretch="Fill" />
 
-        <Image Name="flappyBird" Height="48" Width="50" Source="/birdl-removebg-preview.png" Stretch="Fill" Canvas.Top="192" Canvas.Left="23" HorizontalAlignment="Center" VerticalAlignment="Top" RenderTransformOrigin="1,1" >
+        <Image Name="flappyBird" Height="48" Width="50" Source="/birdl-removebg-preview.png" Stretch="Fill" Canvas.Top="192" Canvas.Left="23" HorizontalAlignment="Center" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" >
             <Image.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
