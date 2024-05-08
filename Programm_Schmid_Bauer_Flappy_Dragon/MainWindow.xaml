@@ -14,7 +14,7 @@
 
 
         <Image Height="390" Width="66" Source="/Piller2-removebg-preview.png" Tag="obs1" Canvas.Left="76" Canvas.Top="270" Stretch="Fill" />
-        <Image Height="388" Width="66" Source="/Piller2-removebg-preview - Copy.png" Tag="obs1" Canvas.Left="76" Canvas.Top="-236" HorizontalAlignment="Center" VerticalAlignment="Top" Stretch="Fill" />
+        <Image Height="388" Width="66" Source="/Piller2-removebg-preview - Copy.png" Tag="obs1" Canvas.Left="76" Canvas.Top="-236" Stretch="Fill" />
 
         <Image Height="390" Width="66" Source="/Piller2-removebg-preview.png" Tag="obs2" Canvas.Left="228" Canvas.Top="416" Stretch="Fill" />
         <Image Height="390" Width="66" Source="/Piller2-removebg-preview - Copy.png" Tag="obs2" Canvas.Left="228" Canvas.Top="-90" Stretch="Fill" />
