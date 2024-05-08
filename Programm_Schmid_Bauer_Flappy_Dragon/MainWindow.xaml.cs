@@ -21,7 +21,7 @@ namespace Programm_Schmid_Bauer_Flappy_Dragon
         DispatcherTimer gameTimer = new DispatcherTimer();
 
         double score;
-        int gravity = 4;
+        int gravity = 6;
         bool gameOver;
         Rect flappyBirdHitBox;
 
@@ -83,7 +83,7 @@ namespace Programm_Schmid_Bauer_Flappy_Dragon
             if (e.Key == Key.Space)
             {
                 flappyBird.RenderTransform = new RotateTransform(-20, flappyBird.Width / 2, flappyBird.Height / 2);
-                gravity = -gravity;
+                gravity = -6;
             }
 
             if (e.Key == Key.R && gameOver == true)
@@ -95,7 +95,7 @@ namespace Programm_Schmid_Bauer_Flappy_Dragon
         {
             flappyBird.RenderTransform = new RotateTransform(5, flappyBird.Width / 2, flappyBird.Height / 2);
 
-            gravity = gravity;
+            gravity = 6;
         }
         private void StartGame()
         {
