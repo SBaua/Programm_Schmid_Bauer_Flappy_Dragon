@@ -19,6 +19,7 @@
     <None Remove="flappyBird.png" />
     <None Remove="flocke1_-removebg-preview.png" />
     <None Remove="flocke2-removebg-preview.png" />
+    <None Remove="gradient-arctic-blue-with-symmetrical-beams-abstract-backdrop_76000-9086.avif" />
     <None Remove="nird-removebg-preview.png" />
     <None Remove="Piller2-removebg-preview - Copy.png" />
     <None Remove="Piller2-removebg-preview.png" />
@@ -37,6 +38,7 @@
     <Resource Include="flappyBird.png" />
     <Resource Include="flocke1_-removebg-preview.png" />
     <Resource Include="flocke2-removebg-preview.png" />
+    <Resource Include="gradient-arctic-blue-with-symmetrical-beams-abstract-backdrop_76000-9086.avif" />
     <Resource Include="nird-removebg-preview.png" />
     <Resource Include="Piller2-removebg-preview - Copy.png" />
     <Resource Include="Piller2-removebg-preview.png" />
