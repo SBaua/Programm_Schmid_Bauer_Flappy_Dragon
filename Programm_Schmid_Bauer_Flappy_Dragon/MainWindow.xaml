@@ -44,5 +44,10 @@
                 <ImageBrush ImageSource="/button_different-gamemode.png"/>
             </Button.Background>
         </Button>
+        <TextBlock Canvas.Left="142" TextWrapping="Wrap" Canvas.Top="152" IsEnabled="False">
+            <TextBlock.Background>
+                <ImageBrush/>
+            </TextBlock.Background>
+        </TextBlock>
     </Canvas>
 </Window>
