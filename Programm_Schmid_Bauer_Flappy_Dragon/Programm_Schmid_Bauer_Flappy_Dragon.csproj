@@ -9,6 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Background.jpg" />
     <None Remove="birdl-removebg-preview.png" />
     <None Remove="button_click-here-for-a-different-icebird.png" />
     <None Remove="button_different-gamemode.png" />
@@ -28,6 +29,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Background.jpg" />
     <Resource Include="birdl-removebg-preview.png" />
     <Resource Include="button_click-here-for-a-different-icebird.png" />
     <Resource Include="button_different-gamemode.png" />

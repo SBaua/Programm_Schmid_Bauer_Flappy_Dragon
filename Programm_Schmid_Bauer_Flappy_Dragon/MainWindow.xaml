@@ -8,7 +8,7 @@
         Title="Flappy Dragon Project Schmid Bauer" Height="490" Width="525" UseLayoutRounding="False">
     <Canvas Name="MyCanvas" Focusable="True" KeyDown="KeyIsDown" KeyUp="KeyIsUp">
         <Canvas.Background>
-            <ImageBrush/>
+            <ImageBrush ImageSource="/Background.jpg"/>
         </Canvas.Background>
 
         <Image Height="204" Width="200" Source="/flocke1_-removebg-preview.png" Canvas.Top="105" Tag="clouds" Stretch="Fill" Canvas.Left="23"/>
