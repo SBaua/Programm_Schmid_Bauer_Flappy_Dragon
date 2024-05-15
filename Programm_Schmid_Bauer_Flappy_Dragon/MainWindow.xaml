@@ -6,7 +6,10 @@
         xmlns:local="clr-namespace:Programm_Schmid_Bauer_Flappy_Dragon"
         mc:Ignorable="d"
         Title="Flappy Dragon Project Schmid Bauer" Height="490" Width="525" UseLayoutRounding="False">
-    <Canvas Name="MyCanvas" Focusable="True" KeyDown="KeyIsDown" KeyUp="KeyIsUp" Background="WhiteSmoke">
+    <Canvas Name="MyCanvas" Focusable="True" KeyDown="KeyIsDown" KeyUp="KeyIsUp">
+        <Canvas.Background>
+            <ImageBrush ImageSource="/gradient-arctic-blue-with-symmetrical-beams-abstract-backdrop_76000-9086.avif"/>
+        </Canvas.Background>
 
         <Image Height="204" Width="200" Source="/flocke1_-removebg-preview.png" Canvas.Top="112" Tag="clouds" Stretch="Fill"/>
 
@@ -44,10 +47,5 @@
                 <ImageBrush ImageSource="/button_different-gamemode.png"/>
             </Button.Background>
         </Button>
-        <TextBlock Canvas.Left="142" TextWrapping="Wrap" Canvas.Top="152" IsEnabled="False">
-            <TextBlock.Background>
-                <ImageBrush/>
-            </TextBlock.Background>
-        </TextBlock>
     </Canvas>
 </Window>
