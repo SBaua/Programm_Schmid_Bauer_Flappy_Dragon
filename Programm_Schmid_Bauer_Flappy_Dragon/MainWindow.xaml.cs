@@ -119,7 +119,7 @@ namespace Programm_Schmid_Bauer_Flappy_Dragon
             Canvas.SetTop(flappyBird, 190);
 
             foreach (var x in MyCanvas.Children.OfType<Image>())
-            {
+            {        
                 if ((string)x.Tag == "obs1")
                 {
                     Canvas.SetLeft(x, 500);
