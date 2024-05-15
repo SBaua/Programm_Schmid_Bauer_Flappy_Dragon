@@ -13,8 +13,6 @@
 
         <Image Height="204" Width="200" Source="/flocke1_-removebg-preview.png" Canvas.Top="105" Tag="clouds" Stretch="Fill" Canvas.Left="23"/>
 
-        <Image Height="145" Width="200" Source="/clouds2.png" Canvas.Left="307" Canvas.Top="120" Tag="clouds"/>
-
 
         <Image Height="390" Width="66" Source="/Piller2-removebg-preview.png" Tag="obs1" Canvas.Left="76" Canvas.Top="270" Stretch="Fill" />
         <Image Height="388" Width="66" Source="/Piller2-removebg-preview - Copy.png" Tag="obs1" Canvas.Left="76" Canvas.Top="-236" Stretch="Fill" />
@@ -53,5 +51,6 @@
             </TextBlock.Background>
         </TextBlock>
         <Image x:Name="bird_hitbox" Height="26" Width="30" Canvas.Left="38" Canvas.Top="200" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Image Height="173" Width="190" Source="/flocke2-removebg-preview.png" Canvas.Top="136" Tag="clouds" Stretch="Fill" Canvas.Left="294" HorizontalAlignment="Left" VerticalAlignment="Top"/>
     </Canvas>
 </Window>
