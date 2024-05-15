@@ -44,5 +44,6 @@
                 <ImageBrush ImageSource="/button_different-gamemode.png"/>
             </Button.Background>
         </Button>
+        <Image x:Name="bird_hitbox" Height="24" Canvas.Left="32" Canvas.Top="208" Width="31"/>
     </Canvas>
 </Window>
