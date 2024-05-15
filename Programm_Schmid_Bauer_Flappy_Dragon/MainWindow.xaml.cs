@@ -93,7 +93,7 @@ namespace Programm_Schmid_Bauer_Flappy_Dragon
             }
             if (e.Key == Key.Space)
             {
-                bird_hitbox.RenderTransform = new RotateTransform(-20, flappyBird.Width / 2, flappyBird.Height / 2);
+                bird_hitbox.RenderTransform = new RotateTransform(-20, bird_hitbox.Width / 2, bird_hitbox.Height / 2);
                 gravity = -5;
             }
         }
