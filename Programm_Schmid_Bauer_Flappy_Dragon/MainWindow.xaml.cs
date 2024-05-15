@@ -99,7 +99,7 @@ namespace Programm_Schmid_Bauer_Flappy_Dragon
         }
         private void KeyIsUp(object sender, KeyEventArgs e)
         {
-            flappyBird.RenderTransform = new RotateTransform(5, flappyBird.Width / 2, flappyBird.Height / 2);
+            flappyBird.RenderTransform = new RotateTransform(5, bird_hitbox.Width / 2, bird_hitbox.Height / 2);
 
             gravity = 5;
         }
