@@ -38,11 +38,12 @@ namespace Programm_Schmid_Bauer_Flappy_Dragon
         {
             txtScore.Content = "Score: " + score;
 
-            flappyBirdHitBox = new Rect(Canvas.GetLeft(flappyBird), Canvas.GetTop(flappyBird), flappyBird.Width - 12, flappyBird.Height);
+            flappyBirdHitBox = new Rect(Canvas.GetLeft(bird_hitbox), Canvas.GetTop(bird_hitbox), bird_hitbox.Width - 12, bird_hitbox.Height);
 
             Canvas.SetTop(flappyBird, Canvas.GetTop(flappyBird) + gravity);
+            Canvas.SetTop(bird_hitbox, Canvas.GetTop(bird_hitbox) + gravity);
 
-            if (Canvas.GetTop(flappyBird) < -30 || Canvas.GetTop(flappyBird) + flappyBird.Height > 460)
+            if (Canvas.GetTop(bird_hitbox) < -30 || Canvas.GetTop(bird_hitbox) + bird_hitbox.Height > 460)
             {
                 EndGame();
             }

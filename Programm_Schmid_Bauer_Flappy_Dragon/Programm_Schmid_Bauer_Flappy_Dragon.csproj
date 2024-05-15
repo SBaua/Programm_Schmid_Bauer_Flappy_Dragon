@@ -15,6 +15,7 @@
     <None Remove="clouds %281%29.png" />
     <None Remove="clouds.png.url" />
     <None Remove="clouds2.png" />
+    <None Remove="download %281%29.jfif" />
     <None Remove="flappyBird.png" />
     <None Remove="flocke1_-removebg-preview.png" />
     <None Remove="flocke2-removebg-preview.png" />
@@ -32,6 +33,7 @@
     <Resource Include="clouds (1).png" />
     <Resource Include="clouds.png.url" />
     <Resource Include="clouds2.png" />
+    <Resource Include="download (1).jfif" />
     <Resource Include="flappyBird.png" />
     <Resource Include="flocke1_-removebg-preview.png" />
     <Resource Include="flocke2-removebg-preview.png" />
