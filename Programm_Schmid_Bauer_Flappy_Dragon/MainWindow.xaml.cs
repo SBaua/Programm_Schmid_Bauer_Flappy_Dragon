@@ -117,6 +117,7 @@ namespace Programm_Schmid_Bauer_Flappy_Dragon
             gameOver = false;
 
             Canvas.SetTop(flappyBird, 190);
+            Canvas.SetTop(bird_hitbox , 190);
 
             foreach (var x in MyCanvas.Children.OfType<Image>())
             {        
