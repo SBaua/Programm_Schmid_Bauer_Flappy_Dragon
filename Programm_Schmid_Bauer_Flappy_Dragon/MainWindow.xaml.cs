@@ -156,7 +156,7 @@ namespace Programm_Schmid_Bauer_Flappy_Dragon
         {
             gameTimer.Stop();
             gameOver = true;
-            txtScore.Content += " Game Over!!! Press R to restart.";
+            txtScore.Content += " Game Over!!!";
             this.btnBird.Visibility = Visibility.Visible;
             this.btnGameMode.Visibility = Visibility.Visible;
             this.pillertop1.Visibility = Visibility.Hidden;

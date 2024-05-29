@@ -1,4 +1,4 @@
-﻿     <Window x:Class="Programm_Schmid_Bauer_Flappy_Dragon.MainWindow"
+﻿<Window x:Class="Programm_Schmid_Bauer_Flappy_Dragon.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -35,16 +35,8 @@
         </Image>
 
         <Label Name="txtScore" FontSize="22" FontWeight="ExtraBold" Content="Score: 0" />
-        <Button x:Name="btnBird"  Content="" Height="59" Canvas.Top="357" Width="275" Canvas.Left="146" Click="btnBird_Click" HorizontalAlignment="Left" VerticalAlignment="Center" >
-            <Button.Background>
-                <ImageBrush ImageSource="/button_click-here-for-a-different-icebird.png"/>
-            </Button.Background>
-        </Button>
-        <Button x:Name="btnGameMode" Content="" Canvas.Left="147" Canvas.Top="270" Height="55" Width="274" Click="btnGameMode_Click">
-            <Button.Background>
-                <ImageBrush ImageSource="/button_different-gamemode.png"/>
-            </Button.Background>
-        </Button>
+        <Button x:Name="btnBird"  Content="" Height="59" Canvas.Top="357" Width="275" Canvas.Left="146" Click="btnBird_Click" HorizontalAlignment="Left" VerticalAlignment="Center" Background="{DynamicResource {x:Static SystemColors.ActiveCaptionBrushKey}}" />
+        <Button x:Name="btnGameMode" Content="Ulta click fia nu moi" Canvas.Left="147" Canvas.Top="270" Height="55" Width="274" Click="btnGameMode_Click" Background="{DynamicResource {x:Static SystemColors.ActiveCaptionBrushKey}}" SnapsToDevicePixels="True"/>
         <TextBlock Canvas.Left="142" TextWrapping="Wrap" Canvas.Top="152" IsEnabled="False">
             <TextBlock.Background>
                 <ImageBrush/>
