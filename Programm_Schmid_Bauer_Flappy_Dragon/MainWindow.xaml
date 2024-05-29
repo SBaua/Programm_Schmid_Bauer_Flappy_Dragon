@@ -42,7 +42,7 @@
                 <ImageBrush/>
             </TextBlock.Background>
         </TextBlock>
-        <Image x:Name="bird_hitbox" Height="26" Width="30" Canvas.Left="37" Canvas.Top="207" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <Image x:Name="bird_hitbox" Height="26" Width="30" Canvas.Left="33" Canvas.Top="200" HorizontalAlignment="Left" VerticalAlignment="Top"/>
         <Image Height="173" Width="190" Source="/flocke2-removebg-preview.png" Canvas.Top="136" Tag="clouds" Stretch="Fill" Canvas.Left="294" HorizontalAlignment="Left" VerticalAlignment="Top"/>
     </Canvas>
 </Window>
