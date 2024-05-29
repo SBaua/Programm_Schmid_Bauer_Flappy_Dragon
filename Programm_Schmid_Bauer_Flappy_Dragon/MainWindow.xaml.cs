@@ -117,6 +117,8 @@ namespace Programm_Schmid_Bauer_Flappy_Dragon
             this.pillerbottom2.Visibility = Visibility.Visible;
             this.pillerbottom3.Visibility = Visibility.Visible;
 
+            this.flappyBird.Visibility = Visibility.Visible;
+
             MyCanvas.Focus();
 
             int temp = 300;
