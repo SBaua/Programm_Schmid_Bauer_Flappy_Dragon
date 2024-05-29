@@ -40,7 +40,7 @@
                 <ImageBrush ImageSource="/button_click-here-for-a-different-icebird.png"/>
             </Button.Background>
         </Button>
-        <Button x:Name="btnGameMode" Content="" Canvas.Left="147" Canvas.Top="270" Height="55" Width="274">
+        <Button x:Name="btnGameMode" Content="" Canvas.Left="147" Canvas.Top="270" Height="55" Width="274" Click="btnGameMode_Click">
             <Button.Background>
                 <ImageBrush ImageSource="/button_different-gamemode.png"/>
             </Button.Background>

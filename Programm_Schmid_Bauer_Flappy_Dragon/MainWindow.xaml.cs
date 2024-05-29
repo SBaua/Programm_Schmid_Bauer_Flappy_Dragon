@@ -109,6 +109,14 @@ namespace Programm_Schmid_Bauer_Flappy_Dragon
             this.btnBird.Visibility = Visibility.Hidden;
             this.btnGameMode.Visibility = Visibility.Hidden;
 
+            this.pillertop1.Visibility = Visibility.Visible;
+            this.pillertop2.Visibility = Visibility.Visible;
+            this.pillertop3.Visibility = Visibility.Visible;
+
+            this.pillerbottom1.Visibility = Visibility.Visible;
+            this.pillerbottom2.Visibility = Visibility.Visible;
+            this.pillerbottom3.Visibility = Visibility.Visible;
+
             MyCanvas.Focus();
 
             int temp = 300;
@@ -166,6 +174,11 @@ namespace Programm_Schmid_Bauer_Flappy_Dragon
         private void btnBird_Click(object sender, RoutedEventArgs e)
         {
            /* flappyBird.Opacity */
+        }
+
+        private void btnGameMode_Click(object sender, RoutedEventArgs e)
+        {
+            StartGame();
         }
     }
 }
