@@ -85,21 +85,22 @@ namespace Programm_Schmid_Bauer_Flappy_Dragon
             {
                 flappyBird.RenderTransform = new RotateTransform(-20, flappyBird.Width / 2, flappyBird.Height / 2);
                 gravity = -5;
+                bird_hitbox.RenderTransform = new RotateTransform(-20, bird_hitbox.Width / 2, bird_hitbox.Height / 2);
+                gravity = -5;
             }
 
             if (e.Key == Key.R && gameOver == true)
             {
                 StartGame();
             }
-            if (e.Key == Key.Space)
-            {
-                bird_hitbox.RenderTransform = new RotateTransform(-20, bird_hitbox.Width / 2, bird_hitbox.Height / 2);
-                gravity = -5;
-            }
+            
         }
         private void KeyIsUp(object sender, KeyEventArgs e)
         {
             flappyBird.RenderTransform = new RotateTransform(5, bird_hitbox.Width / 2, bird_hitbox.Height / 2);
+
+            gravity = 5;
+            bird_hitbox.RenderTransform = new RotateTransform(5, bird_hitbox.Width / 2, bird_hitbox.Height / 2);
 
             gravity = 5;
         }
@@ -117,7 +118,7 @@ namespace Programm_Schmid_Bauer_Flappy_Dragon
             gameOver = false;
 
             Canvas.SetTop(flappyBird, 190);
-            Canvas.SetTop(bird_hitbox , 190);
+            Canvas.SetTop(bird_hitbox, 190);
 
             foreach (var x in MyCanvas.Children.OfType<Image>())
             {        
