@@ -35,8 +35,8 @@
         </Image>
 
         <Label Name="txtScore" FontSize="22" FontWeight="ExtraBold" Content="Score: 0" />
-        <Button x:Name="btnBird"  Content="" Height="59" Canvas.Top="357" Width="275" Canvas.Left="146" Click="btnBird_Click" HorizontalAlignment="Left" VerticalAlignment="Center" Background="{DynamicResource {x:Static SystemColors.ActiveCaptionBrushKey}}" />
-        <Button x:Name="btnGameMode" Content="Ulta click fia nu moi" Canvas.Left="147" Canvas.Top="270" Height="55" Width="274" Click="btnGameMode_Click" Background="{DynamicResource {x:Static SystemColors.ActiveCaptionBrushKey}}" SnapsToDevicePixels="True"/>
+        <Button x:Name="btnBird"  Content="Click hier fia goa nix" Height="59" Canvas.Top="357" Width="275" Canvas.Left="146" Click="btnBird_Click" HorizontalAlignment="Left" VerticalAlignment="Center" Background="{DynamicResource {x:Static SystemColors.ActiveCaptionBrushKey}}" FontSize="18" />
+        <Button x:Name="btnGameMode" Content="Ulta click fia nu moi" Canvas.Left="147" Canvas.Top="270" Height="55" Width="274" Click="btnGameMode_Click" Background="{DynamicResource {x:Static SystemColors.ActiveCaptionBrushKey}}" SnapsToDevicePixels="True" FontSize="18"/>
         <TextBlock Canvas.Left="142" TextWrapping="Wrap" Canvas.Top="152" IsEnabled="False">
             <TextBlock.Background>
                 <ImageBrush/>
