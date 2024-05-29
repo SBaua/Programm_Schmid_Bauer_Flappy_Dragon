@@ -53,5 +53,6 @@
             </TextBlock.Background>
         </TextBlock>
         <Image x:Name="bird_hitbox" Height="26" Width="30" Canvas.Left="33" Canvas.Top="200" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <TextBlock x:Name="txtWarning" Canvas.Left="178" TextWrapping="Wrap" Text="TextBlock" Canvas.Top="139" Height="102" Width="169" HorizontalAlignment="Center" VerticalAlignment="Top"/>
     </Canvas>
 </Window>
