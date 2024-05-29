@@ -42,8 +42,7 @@ namespace Programm_Schmid_Bauer_Flappy_Dragon
             {
                 string s = "Achtung";
                 this.gravity = 7;
-                txtWarning.Text = s;
-                this.txtWarning.Visibility = Visibility.Visible;
+                
             }
             if (score >= 25)
             {
@@ -181,7 +180,7 @@ namespace Programm_Schmid_Bauer_Flappy_Dragon
             this.pillerbottom2.Visibility = Visibility.Hidden;
             this.pillerbottom3.Visibility = Visibility.Hidden;
 
-            this.txtWarning.Visibility = Visibility.Hidden;
+            
 
             this.flappyBird.Visibility = Visibility.Hidden;
             var btnBird = new Button { Content = "btnBird" };
