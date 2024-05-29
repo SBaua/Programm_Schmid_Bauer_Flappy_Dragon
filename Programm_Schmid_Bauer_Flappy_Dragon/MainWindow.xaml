@@ -1,4 +1,4 @@
-﻿<Window x:Class="Programm_Schmid_Bauer_Flappy_Dragon.MainWindow"
+﻿     <Window x:Class="Programm_Schmid_Bauer_Flappy_Dragon.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -14,14 +14,14 @@
         <Image Height="204" Width="200" Source="/flocke1_-removebg-preview.png" Canvas.Top="105" Tag="clouds" Stretch="Fill" Canvas.Left="23"/>
 
 
-        <Image Height="390" Width="66" Source="/Piller2-removebg-preview.png" Tag="obs1" Canvas.Left="76" Canvas.Top="270" Stretch="Fill" />
-        <Image Height="388" Width="66" Source="/Piller2-removebg-preview - Copy.png" Tag="obs1" Canvas.Left="76" Canvas.Top="-236" Stretch="Fill" />
+        <Image x:Name="pillerbottom1" Height="390" Width="66" Source="/Piller2-removebg-preview.png" Tag="obs1" Canvas.Left="76" Canvas.Top="270" Stretch="Fill" />
+        <Image x:Name="pillertop1" Height="388" Width="66" Source="/Piller2-removebg-preview - Copy.png" Tag="obs1" Canvas.Left="76" Canvas.Top="-236" Stretch="Fill" />
 
-        <Image Height="390" Width="66" Source="/Piller2-removebg-preview.png" Tag="obs2" Canvas.Left="228" Canvas.Top="416" Stretch="Fill" />
-        <Image Height="390" Width="66" Source="/Piller2-removebg-preview - Copy.png" Tag="obs2" Canvas.Left="228" Canvas.Top="-90" Stretch="Fill" />
+        <Image x:Name="pillerbottom2" Height="390" Width="66" Source="/Piller2-removebg-preview.png" Tag="obs2" Canvas.Left="228" Canvas.Top="416" Stretch="Fill" />
+        <Image x:Name="pillertop2" Height="390" Width="66" Source="/Piller2-removebg-preview - Copy.png" Tag="obs2" Canvas.Left="228" Canvas.Top="-90" Stretch="Fill" />
 
-        <Image Height="390" Width="66" Source="/Piller2-removebg-preview.png" Tag="obs3" Canvas.Left="426" Canvas.Top="292" Stretch="Fill" />
-        <Image Height="390" Width="66" Source="/Piller2-removebg-preview - Copy.png" Tag="obs3" Canvas.Left="426" Canvas.Top="-214" Stretch="Fill" />
+        <Image x:Name="pillerbottom3" Height="390" Width="66" Source="/Piller2-removebg-preview.png" Tag="obs3" Canvas.Left="426" Canvas.Top="292" Stretch="Fill" />
+        <Image x:Name="pillertop3" Height="390" Width="66" Source="/Piller2-removebg-preview - Copy.png" Tag="obs3" Canvas.Left="426" Canvas.Top="-214" Stretch="Fill" />
 
         <Image Name="flappyBird" Height="48" Width="50" Source="/birdl-removebg-preview.png" Stretch="Fill" Canvas.Top="189" Canvas.Left="27" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" >
             <Image.RenderTransform>
