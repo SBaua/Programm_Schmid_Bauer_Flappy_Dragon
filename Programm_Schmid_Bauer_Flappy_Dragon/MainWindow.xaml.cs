@@ -38,6 +38,18 @@ namespace Programm_Schmid_Bauer_Flappy_Dragon
         {
             txtScore.Content = "Score: " + score;
 
+            if (score >= 3)
+            {
+                string s = "Achtung";
+                this.gravity = 7;
+                txtWarning.Text = s;
+                this.txtWarning.Visibility = Visibility.Visible;
+            }
+            if (score >= 25)
+            {
+                this.gravity = 10;
+            }
+
             flappyBirdHitBox = new Rect(Canvas.GetLeft(bird_hitbox), Canvas.GetTop(bird_hitbox), bird_hitbox.Width - 12, bird_hitbox.Height);
 
             Canvas.SetTop(flappyBird, Canvas.GetTop(flappyBird) + gravity);
@@ -149,8 +161,10 @@ namespace Programm_Schmid_Bauer_Flappy_Dragon
                     Canvas.SetLeft(x, 300 + temp);
                     temp = 800;
                 }
+                
             }
             gameTimer.Start();
+            
         }
         private void EndGame()
         {
@@ -166,6 +180,8 @@ namespace Programm_Schmid_Bauer_Flappy_Dragon
             this.pillerbottom1.Visibility = Visibility.Hidden;
             this.pillerbottom2.Visibility = Visibility.Hidden;
             this.pillerbottom3.Visibility = Visibility.Hidden;
+
+            this.txtWarning.Visibility = Visibility.Hidden;
 
             this.flappyBird.Visibility = Visibility.Hidden;
             var btnBird = new Button { Content = "btnBird" };
