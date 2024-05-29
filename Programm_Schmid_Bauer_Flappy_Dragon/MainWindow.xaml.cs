@@ -41,7 +41,7 @@ namespace Programm_Schmid_Bauer_Flappy_Dragon
             if (score >= 3)
             {
                 string s = "Achtung";
-                this.gravity = 7;
+               /* this.gravity = 7; */
                 txtWarning.Text = s;
                 this.txtWarning.Visibility = Visibility.Visible;
             }
