@@ -11,6 +11,8 @@
             <ImageBrush ImageSource="/Background.jpg"/>
         </Canvas.Background>
 
+        <Image Height="173" Width="190" Source="/flocke2-removebg-preview.png" Canvas.Top="136" Tag="clouds" Stretch="Fill" Canvas.Left="294" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+
         <Image Height="204" Width="200" Source="/flocke1_-removebg-preview.png" Canvas.Top="105" Tag="clouds" Stretch="Fill" Canvas.Left="23"/>
 
 
@@ -23,7 +25,7 @@
         <Image x:Name="pillerbottom3" Height="390" Width="66" Source="/Piller2-removebg-preview.png" Tag="obs3" Canvas.Left="426" Canvas.Top="292" Stretch="Fill" />
         <Image x:Name="pillertop3" Height="390" Width="66" Source="/Piller2-removebg-preview - Copy.png" Tag="obs3" Canvas.Left="426" Canvas.Top="-214" Stretch="Fill" />
 
-        <Image Name="flappyBird" Height="48" Width="50" Source="/birdl-removebg-preview.png" Stretch="Fill" Canvas.Top="189" Canvas.Left="27" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" >
+        <Image x:Name="flappyBird" Height="48" Width="50" Source="/birdl-removebg-preview.png" Stretch="Fill" Canvas.Top="189" Canvas.Left="27" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" >
             <Image.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -34,7 +36,7 @@
             </Image.RenderTransform>
         </Image>
 
-        <Label Name="txtScore" FontSize="22" FontWeight="ExtraBold" Content="Score: 0" />
+        <Label x:Name="txtScore" FontSize="22" FontWeight="ExtraBold" Content="Score: 0" />
         <Button x:Name="btnBird"  Content="" Height="59" Canvas.Top="357" Width="275" Canvas.Left="146" Click="btnBird_Click" HorizontalAlignment="Left" VerticalAlignment="Center" >
             <Button.Background>
                 <ImageBrush ImageSource="/button_click-here-for-a-different-icebird.png"/>
@@ -51,6 +53,5 @@
             </TextBlock.Background>
         </TextBlock>
         <Image x:Name="bird_hitbox" Height="26" Width="30" Canvas.Left="33" Canvas.Top="200" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-        <Image Height="173" Width="190" Source="/flocke2-removebg-preview.png" Canvas.Top="136" Tag="clouds" Stretch="Fill" Canvas.Left="294" HorizontalAlignment="Left" VerticalAlignment="Top"/>
     </Canvas>
 </Window>
