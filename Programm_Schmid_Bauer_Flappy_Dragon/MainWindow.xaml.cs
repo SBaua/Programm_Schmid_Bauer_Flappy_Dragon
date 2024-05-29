@@ -157,6 +157,7 @@ namespace Programm_Schmid_Bauer_Flappy_Dragon
             this.pillerbottom2.Visibility = Visibility.Hidden;
             this.pillerbottom3.Visibility = Visibility.Hidden;
 
+            this.flappyBird.Visibility = Visibility.Hidden;
             var btnBird = new Button { Content = "btnBird" };
             btnBird.Click += btnBird_Click;
 
