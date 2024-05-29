@@ -149,6 +149,14 @@ namespace Programm_Schmid_Bauer_Flappy_Dragon
             txtScore.Content += " Game Over!!! Press R to restart.";
             this.btnBird.Visibility = Visibility.Visible;
             this.btnGameMode.Visibility = Visibility.Visible;
+            this.pillertop1.Visibility = Visibility.Hidden;
+            this.pillertop2.Visibility = Visibility.Hidden;
+            this.pillertop3.Visibility = Visibility.Hidden;
+
+            this.pillerbottom1.Visibility = Visibility.Hidden;
+            this.pillerbottom2.Visibility = Visibility.Hidden;
+            this.pillerbottom3.Visibility = Visibility.Hidden;
+
             var btnBird = new Button { Content = "btnBird" };
             btnBird.Click += btnBird_Click;
 
