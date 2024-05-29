@@ -44,5 +44,6 @@
         </TextBlock>
         <Image x:Name="bird_hitbox" Height="26" Width="30" Canvas.Left="33" Canvas.Top="200" HorizontalAlignment="Left" VerticalAlignment="Top"/>
         <Image Height="173" Width="190" Source="/flocke2-removebg-preview.png" Canvas.Top="136" Tag="clouds" Stretch="Fill" Canvas.Left="294" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <TextBlock x:Name="txtWarning" Canvas.Left="154" TextWrapping="Wrap" HorizontalAlignment="Left" Canvas.Top="187" VerticalAlignment="Top" Height="80" Width="217" FontSize="18" Background="{DynamicResource {x:Static SystemColors.InfoBrushKey}}"/>
     </Canvas>
 </Window>
