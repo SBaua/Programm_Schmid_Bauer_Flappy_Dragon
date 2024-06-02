@@ -24,7 +24,7 @@ namespace Programm_Schmid_Bauer_Flappy_Dragon
         int gravity = 5;
         bool gameOver;
         Rect flappyBirdHitBox;
-        int idk;
+        
 
         public MainWindow()
         {
