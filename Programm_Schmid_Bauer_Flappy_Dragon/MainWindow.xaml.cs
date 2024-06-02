@@ -38,16 +38,11 @@ namespace Programm_Schmid_Bauer_Flappy_Dragon
         {
             txtScore.Content = "Score: " + score;
 
-            if (score >= 3)
-            {
-                string s = "Achtung";
-               /* this.gravity = 7; */
-                txtWarning.Text = s;
-                this.txtWarning.Visibility = Visibility.Visible;
-            }
             if (score >= 25)
             {
                 this.gravity = 10;
+                MessageBox.Show("You got too far. Congratulations!");
+                
             }
 
             flappyBirdHitBox = new Rect(Canvas.GetLeft(bird_hitbox), Canvas.GetTop(bird_hitbox), bird_hitbox.Width - 12, bird_hitbox.Height);
@@ -118,8 +113,8 @@ namespace Programm_Schmid_Bauer_Flappy_Dragon
         }
         private void StartGame()
         {
-            this.btnBird.Visibility = Visibility.Hidden;
-            this.btnGameMode.Visibility = Visibility.Hidden;
+            
+            this.btn_repeat.Visibility = Visibility.Hidden;
 
             this.pillertop1.Visibility = Visibility.Visible;
             this.pillertop2.Visibility = Visibility.Visible;
@@ -171,8 +166,8 @@ namespace Programm_Schmid_Bauer_Flappy_Dragon
             gameTimer.Stop();
             gameOver = true;
             txtScore.Content += " Game Over!!!";
-            this.btnBird.Visibility = Visibility.Visible;
-            this.btnGameMode.Visibility = Visibility.Visible;
+            
+            this.btn_repeat.Visibility = Visibility.Visible;
             this.pillertop1.Visibility = Visibility.Hidden;
             this.pillertop2.Visibility = Visibility.Hidden;
             this.pillertop3.Visibility = Visibility.Hidden;
@@ -185,16 +180,11 @@ namespace Programm_Schmid_Bauer_Flappy_Dragon
 
             this.flappyBird.Visibility = Visibility.Hidden;
             var btnBird = new Button { Content = "btnBird" };
-            btnBird.Click += btnBird_Click;
+            
 
         }
 
-        private void btnBird_Click(object sender, RoutedEventArgs e)
-        {
-           /* flappyBird.Opacity */
-        }
-
-        private void btnGameMode_Click(object sender, RoutedEventArgs e)
+        private void btn_repeat_Click_1(object sender, RoutedEventArgs e)
         {
             StartGame();
         }
